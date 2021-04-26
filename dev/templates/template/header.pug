@@ -1,0 +1,19 @@
+header.head
+	.section
+		.head-row
+			.head-logo
+				+img('logo.svg')
+			.head-burger(data-click-action='front:burgerClick')
+				span
+			.head-hidden
+				nav.head-nav
+					button.head-btn.active Привет
+					button.head-btn Услуги
+					button.head-btn Адрес
+					button.head-btn Онлайн-Запись
+					button.head-btn Wonder one
+				.head-links
+					a(href='#').head-link
+						+img('Facebook_icon.svg')
+					a(href='#').head-link
+						+img('Instagram_icon.svg')

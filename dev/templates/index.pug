@@ -1,0 +1,62 @@
+extends template/main
+append vars
+	-
+		page_title= 'Главная'
+block content
+	main
+		section
+			.section
+				.screens
+					.screen.screen-slider
+						.slider
+							.slide
+								+img('sc-one-img.png').slide-img
+								p.slide-text
+									span WONDER ONE —
+									span ПРОСТО&nbsp;
+										strong ПАРИКМАХЕРСКАЯ
+									span В ТВОЕМ ГОРОДЕ
+							.slide
+								+img('sc-two-img.png').slide-img
+								p.slide-text
+									span КОНЕЦ Е####ГО 20x0,
+									span САМОЕ ВРЕМЯ ДЛЯ
+									span ТВОЕЙ&nbsp;
+										strong НОВОЙ ПРИЧЕСКИ
+							.slide
+								+img('sc-three-img.png').slide-img
+								p.slide-text
+									span У НАС ДЛЯ ТЕБЯ ЕСТЬ
+									span
+										strong КЛУБНАЯ КАРТА
+									span узнай как её забрать
+							.slide
+								+img('sc-four-img.png').slide-img
+								p.slide-text
+									span НИКАКИХ “и ПОкороче, и
+									span подлиннее” —&nbsp;
+										strong стрижем
+									span
+										strong как надо&nbsp;
+										|и все тут
+							.slide
+								+img('sc-five-img.png').slide-img
+								p.slide-text
+									span новый хайер от
+									span тёть гали уже не то?
+									span
+										strong ждем тебя у нас
+							.slide
+								+img('sc-six-img.png').slide-img
+								p.slide-text
+									span любишь&nbsp;
+										strong стрижки
+									span на дому? люби и
+									span парикмахерскую
+						.slider-dots
+							button(data-click-action='front:sliderClick' data-pos='0').active
+							button(data-click-action='front:sliderClick' data-pos='1')
+							button(data-click-action='front:sliderClick' data-pos='2')
+							button(data-click-action='front:sliderClick' data-pos='3')
+							button(data-click-action='front:sliderClick' data-pos='4')
+							button(data-click-action='front:sliderClick' data-pos='5')

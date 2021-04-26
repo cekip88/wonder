@@ -1,0 +1,60 @@
+$unit: 'px'
+//
+	 Сетка 2.0
+	  m - мобильные колонки
+	  ml  - мобильные в развороте
+	  t   - планшетные
+	  tl  - планшетные в развороте
+	  d  -  десктопные
+.pallet
+	font-weight: 700
+	text-align: center
+	&:before
+		+af("P")
+.bricks
+	+w(100%)
+	display: flex
+	justify-content: flex-start
+	flex-wrap: wrap
+
+//$one_col: 100 / $cols
+
+$mobile: 320
+$mobile-large: 480
+$tablet: 768
+$tablet-large: 1024
+$desktop: 1170
+
+=grid($col_cnt,$letter,$depCoeff,$colCoeff)
+	@for $i from 1 through $col_cnt
+		$coef: $colCoeff / $depCoeff
+		$one_dep: 100% / (($col_cnt * $coef) + ($col_cnt - 1))
+		$one_full_col: $one_dep * $coef + $one_dep
+		$one_col: $one_dep * $coef
+		#{$letter}#{$i}
+			width:  ($one_full_col * $i)
+		#{$letter}wd#{$i}
+			width: (($one_full_col) * $i) - $one_dep
+		#{$letter}wi#{$i}
+			width: (($one_full_col) * $i) - $one_col
+
+@media screen and (min-width: $mobile#{$unit})
+	$colCoeff: 45
+	$depCoeff: 10
+	+grid(6,'.m',$depCoeff,$colCoeff)
+@media screen and (min-width: $mobile-large#{$unit})
+	$colCoeff: 45
+	$depCoeff: 10
+	+grid(6,'.ml',$depCoeff,$colCoeff)
+@media screen and (min-width: $tablet#{$unit})
+	$colCoeff: 79
+	$depCoeff: 19
+	+grid(8,'.t',$depCoeff,$colCoeff)
+@media screen and (min-width: $tablet-large#{$unit})
+	$colCoeff: 83
+	$depCoeff: 19
+	+grid(10,'.tl',$depCoeff,$colCoeff)
+@media screen and (min-width: $desktop#{$unit})
+	$colCoeff: 79
+	$depCoeff: 20
+	+grid(12,'.d',$depCoeff,$colCoeff)
