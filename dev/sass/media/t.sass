@@ -1,3 +1,39 @@
 .section
 	+w($tablet)
 	margin: auto
+	padding: 0
+
+.head
+	&-row
+		position: relative
+	&-burger
+		display: none
+	&-hidden
+		width: initial
+		height: initial
+		transform: translateX(0)
+		background-color: transparent
+		position: initial
+	&-nav
+		flex-direction: row
+	&-btn
+		width: initial
+		margin-right: 50px
+		margin-bottom: 0
+		&:last-child
+			margin-right: 0
+	&-links
+		width: 62px
+		margin: 0
+		display: flex
+		flex-direction: column
+		align-items: center
+		position: absolute
+		left: 0
+	&-link
+		margin-right: 0
+		img
+			display: block
+
+.slide
+	height: 630px

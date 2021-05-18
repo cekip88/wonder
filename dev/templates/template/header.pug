@@ -3,15 +3,15 @@ header.head
 		.head-row
 			.head-logo
 				+img('logo.svg')
-			.head-burger(data-click-action='front:burgerClick')
+			button.head-burger(data-click-action='front:burgerClick')
 				span
 			.head-hidden
 				nav.head-nav
-					button.head-btn.active Привет
-					button.head-btn Услуги
-					button.head-btn Адрес
-					button.head-btn Онлайн-Запись
-					button.head-btn Wonder one
+					button(data-click-action='front:changeScreen' data-pos='0').head-btn.screen-btn.active Привет
+					button(data-click-action='front:changeScreen' data-pos='1').head-btn.screen-btn Услуги
+					button(data-click-action='front:changeScreen' data-pos='2').head-btn.screen-btn Адрес
+					button(data-click-action='front:changeScreen' data-pos='3').head-btn.screen-btn Онлайн-Запись
+					button(data-click-action='front:changeScreen' data-pos='4').head-btn.screen-btn Wonder one
 				.head-links
 					a(href='#').head-link
 						+img('Facebook_icon.svg')

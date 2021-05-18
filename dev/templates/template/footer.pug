@@ -3,8 +3,10 @@ footer.foot
 		.foot-signature
 			span WONDERONE.XYZ © 2020 — 2021
 		.foot-links
-			button.foot-link
+			button(data-click-action='front:changeScreen' data-pos='5').screen-btn.foot-link
 				span Privacy policy
-			button.foot-link
+			button(data-click-action='front:changeScreen' data-pos='6').screen-btn.foot-link
 				span Created by
-	+inc('js','front.js',false)(type="module")
+	+inc('js','https://static.tildacdn.com/js/jquery-1.10.2.min.js',false)
+	+inc('js','front.js',true)(type="module")
+	script(type="text/javascript" src="//w446141.yclients.com/widgetJS" charset="UTF-8")
