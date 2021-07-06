@@ -4,36 +4,140 @@
 	padding: 0
 
 .head
+	padding-top: 20px
 	&-row
 		position: relative
 	&-burger
 		display: none
 	&-hidden
 		width: initial
+		max-width: calc(100% - 100px)
 		height: initial
-		transform: translateX(0)
+		transform: initial
 		background-color: transparent
 		position: initial
 	&-nav
+		+wh(566px,initial)
+		max-width: 100%
+		justify-content: space-between
 		flex-direction: row
 	&-btn
 		width: initial
-		margin-right: 50px
 		margin-bottom: 0
 		&:last-child
 			margin-right: 0
 	&-links
 		width: 62px
+		height: calc(100vh - 20px)
 		margin: 0
+		padding-top: 53px
 		display: flex
 		flex-direction: column
 		align-items: center
+		justify-content: center
 		position: absolute
 		left: 0
+		top: 0
+		bottom: 0
+		&:before,&:after
+			+af
+			+wh(1px,calc((100% - 186px) / 2))
+			background-color: #000
+		&:before
+			margin-bottom: 20px
+		&:after
+			margin-top: 20px
 	&-link
 		margin-right: 0
+		&:first-child
+			margin-bottom: 10px
 		img
+			width: 48px
 			display: block
 
+.screens
+	width: calc(100% - 62px)
+	height: calc(100vh - 129px)
+	margin-left: auto
+
+.slider
+	padding: 50px 0
+	&-cont
+		margin-bottom: 35px
 .slide
-	height: 630px
+	height: 50vh
+	flex-direction: column
+	&-img
+		width: initial
+		max-height: 100%
+		max-width: 100%
+		object-fit: cover
+	&-text
+		font-size: 20px
+		position: absolute
+
+.services
+	height: initial
+	&-list
+		margin-left: auto
+		flex-direction: row
+		flex-wrap: wrap
+	&-item
+		margin-bottom: 20px
+		img
+			width: 14px
+	&-text
+		font-size: 14px
+
+.address
+	height: 60vh
+	padding: 0
+	position: relative
+	&:after
+		+af
+		+wh(80%,calc(100% - 20px))
+		border: 2px solid rgba(#000,.5)
+		position: absolute
+		top: 0
+		right: 0
+		z-index: -1
+	iframe
+		height: calc(100% - 10px)
+		width: calc(100% - 10px)
+		margin: 10px 10px 0 auto
+		display: block
+
+.about
+	p
+		width: 55%
+		margin: 0 auto
+
+
+.created
+	&-inner
+		width: 458px
+
+.privacy,.address,.online,.services
+	padding-left: 7%
+.foot
+	padding-bottom: 40px
+	.section
+		max-width: calc(100% - 100px)
+		width: 513px
+		margin: 0 20px 0 auto
+		flex-direction: row
+		align-items: center
+		justify-content: flex-end
+	&-signature
+		padding: 0 10px
+		flex-shrink: 0
+	&-links
+		width: 100%
+		margin-top: 0
+		justify-content: flex-end
+	&-link
+		margin-left: auto
+
+
+body .yWidgetShow.right
+	padding-left: 100px

@@ -130,7 +130,7 @@ block content
 									span 7000 ₸
 					.screen.address
 						iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A03d41c35a1a67c149fb14b4741fce4fb4be6cbef2d69e17715ce0e2688cf16cc&amp;source=constructor" frameborder="0")
-					.screen
+					.screen.online
 					.screen.about
 						p
 							strong WONDER ONE
@@ -184,7 +184,8 @@ block content
 						p 8.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.
 						p 8.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу https://wonderone.xyz/
 					.screen.created
-						-for (let i = 0; i < 5; i++)
-							+img('kas-logo.svg')
-						a(href='https://grammla.kz')
-							+img('gr-logo.svg')
+						.created-inner
+							-for (let i = 0; i < 5; i++)
+								+img('kas-logo.svg')
+							a(href='https://grammla.kz')
+								+img('gr-logo.svg')

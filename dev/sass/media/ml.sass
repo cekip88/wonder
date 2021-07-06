@@ -1,2 +1,54 @@
-.section
-	+w($mobile-large)
+.head
+	padding-top: 10px
+	&-nav
+		height: calc(100vh - 57px - 146px)
+		justify-content: space-between
+	&-btn
+		margin-bottom: 0
+	&-links
+		margin-top: 15px
+
+.screens
+	height: calc(100vh - 116px)
+
+.slider
+	&-cont
+		margin-bottom: 10px
+.slide
+	+wh(100%)
+	flex-direction: row
+	justify-content: center
+	img
+		width: initial
+	&-text
+		position: static
+
+.services
+	&-list
+		justify-content: center
+		flex-direction: row
+		flex-wrap: wrap
+	&-item
+		flex: 0 0 35%
+		margin-bottom: 0
+
+.address
+	height: 100%
+	padding: 10px 0
+	iframe
+		height: 100%
+
+
+.online
+	&-inner
+		height: 60vh
+
+.about
+	display: flex
+	align-items: center
+
+
+.created
+	&-inner
+		width: 350px
+		margin: 0 auto
